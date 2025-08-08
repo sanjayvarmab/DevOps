@@ -18,25 +18,27 @@ Scalability: Works perfectly with orchestration tools like Kubernetes.
 Isolation: Runs apps in isolated environments to prevent conflicts.
 
 2. Difference Between VM and Container
-Feature	Virtual Machines	Containers (Docker)
-Virtualization Level	Hardware level	OS level
-OS	Each VM has its own OS	Share host OS kernel
-Resource Usage	Heavy (CPU, memory, disk)	Lightweight
-Boot Time	Minutes	Seconds
-Image Size	Large (GBs)	Small (MBs)
-Portability	Less portable	Highly portable
+Feature	                   Virtual Machines	         Containers (Docker)
+
+Virtualization Level       	Hardware level	            OS level
+OS                         Each VM has its own OS	    Share host OS kernel
+Resource Usage	            Heavy (CPU, memory, disk)	  Lightweight
+Boot Time	                     Minutes	                  Seconds
+Image Size	                   Large (GBs)	             Small (MBs)
+Portability	                Less portable	            Highly portable
 
 Summary:
 VM = heavy, isolated, full OS
 Container = lightweight, share OS, faster and more efficient
 
 3. Images vs Containers
-Aspect	Docker Image	Docker Container
-Definition	Blueprint/template for a container	Running instance of an image
-Mutable?	No (read-only)	Yes (runtime changes possible)
-Stored on	Disk (local or registry like Docker Hub)	Memory/disk while running
-Command	docker build, docker pull	docker run, docker start/stop
-Example	An image of Nginx	A live Nginx server running from that image
+Aspect	                                  Docker Image	                       Docker Container
+Definition	                  Blueprint/template for a container	          Running instance of an image
+Mutable?	                           No (read-only)	                         Yes (runtime changes possible)
+Stored on	                  Disk (local or registry like Docker Hub)	          Memory/disk while running
+Command	                       docker build, docker pull	                       docker run, docker start/stop
+
+Example	                          An image of Nginx	                          A live Nginx server running from that image
 
 Think of an image like a class in programming, and a container like an object created from that class.
 
