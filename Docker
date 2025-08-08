@@ -1,3 +1,57 @@
 sudo apt update 
+
 sudo apt install docker -y
+
 sudo systemctl dicker status/start
+
+docker commands
+----------------
+docker run - This command creates and starts a Docker container from a Docker image.
+
+docker ps - This command lists all the running Docker containers.
+
+docker stop - This command stops a running Docker container.
+
+docker rm - This command removes a Docker container.
+
+docker images - This command lists all the Docker images that are available on the local system.
+
+docker pull - This command downloads a Docker image from a registry to the local system.
+
+docker push - This command uploads a Docker image from the local system to a registry.
+
+docker build - This command builds a Docker image from a Dockerfile.
+
+docker exec - This command executes a command in a running Docker container.
+
+docker logs - This command shows the logs of a Docker container.
+
+docker build: Builds a Docker image from a Dockerfile.
+docker images: Lists the Docker images on the host system.
+docker start: Starts a stopped Docker container.
+docker rmi: Removes a Docker image.
+docker exec: Runs a command inside a running Docker container.
+docker logs: Displays the logs of a Docker container.
+docker cp: Copies files between a Docker container and the host system.
+docker network: Manages Docker networks, which are used to enable communication between Docker containers.
+docker-compose: Defines and runs multi-container Docker applications.
+
+DOckerfile:
+------------
+A Dockerfile is a script that contains a set of instructions for building a Docker image. The Dockerfile specifies the base image to use, along with additional instructions for configuring and installing software, setting environment variables, and running commands inside the container.
+
+dockerfile components
+----------------------
+FROM: Specifies the base image to use as the starting point for the build. This instruction is required in every Dockerfile.
+
+RUN: Runs a command in the container during the build process. This can be used to install software packages or run any other command that needs to be executed during the build.
+
+COPY or ADD: Copies files or directories from the build context (the directory containing the Dockerfile) to the container. COPY is preferred for simple file copying, while ADD can handle more advanced use cases such as automatically unpacking tar files.
+
+WORKDIR: Sets the working directory for any subsequent commands in the Dockerfile. This is similar to using the cd command in a shell script.
+
+ENV: Sets environment variables in the container. These variables can be referenced in subsequent commands.
+
+EXPOSE: Specifies the port(s) that the container will listen on at runtime. This does not actually publish the port to the host machine; that must be done separately with the -p option when running the container.
+
+CMD or ENTRYPOINT: Specifies the command to run when the container is started. CMD can be used to set a default command that can be overridden at runtime, while ENTRYPOINT is used to specify a command that cannot be overridden.
