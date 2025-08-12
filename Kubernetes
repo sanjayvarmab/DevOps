@@ -1,0 +1,16 @@
+Kubernetes is a container orchestration platform.
+It will support's the HOst level, Auto healing, Auto scaling, & Enterprice level support compring with the docker.
+By default kubernetes is a cluster (cluster is a group of nodes master & worker)
+
+-----------*ARCHITECTURE OF KUBERNETES*-------------
+
+DATA PLANE OR WORKER PLANE
+  1. KUBELET : Which is responsibel for creation of the pods and it will basically ensure that the pod is always in the running state. If it is not running then it will take the necessary action by using the control plane
+  2. KUBEPROXY : It uses IPtable for network related configurtions & load balancing
+  3. CONTINER RUN TIME : It is responsible for running continer
+CONTROL OR MATER PLANE
+  1. API SERVER : Is a component that exposes the kubernets to external world and takes all the requests from exrernal
+  2. SECHUDLER : It is responsible for secheduling the resources & pods on the kubernetes (receives information from API server)
+  3. ETCD : The entier cluster information will stored as objects or key value pairs
+  4. CONTROLLER MANAGER : 
+  5. CLOUD CONTROLLER MANAGER : 
