@@ -15,6 +15,22 @@ CONTROL OR MATER PLANE
   4. CONTROLLER MANAGER : 
   5. CLOUD CONTROLLER MANAGER : 
 
+----------------------------*Commands*----------------------------------------
+minikube start - to start k-cluster
+kubectl get nodes - to check the node status
+kubectl apply -f <file name> or cerate - to create pod or deployment
+kubectl get pods - list of pods
+kubectl get deploy - list of deployments
+kubectl get all - list of all pods & deployments
+kubectl get all -a - list of all name spaces in the cluster
+kubectl delete pod <name> - to delete the pod
+kubectl logs <name> - to verify the logs of pods
+kubectl get pods -w - watch the pods
+curl <ip address> 
+kubectl describe <name> - all info about pods
+
+
+
 -------------------------------------------------------------------------------
 POD : A pod can be a single or multiple containers, pod is similar to the continer
  basic pod yaml file 
