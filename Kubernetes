@@ -76,6 +76,15 @@ spec:
           ports:
             - containerPort: 80
 --------------------------------------------------------------------
+13-08-2025
+---------------------KUBERNETES SERVICES----------------------
+1. Cluster IP : with in cluster
+2. Node port : with in the orginazation
+3. Load blancer : which will expose the app into the external world (support when the app is in the cloude)
+
+lables in the deploy.yml & selectors in the serveces.yml file need to be same 
+
+
 
 
    
