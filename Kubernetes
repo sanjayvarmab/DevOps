@@ -16,4 +16,50 @@ CONTROL OR MATER PLANE
   5. CLOUD CONTROLLER MANAGER : 
 
 -------------------------------------------------------------------------------
+POD : A pod can be a single or multiple containers, pod is similar to the continer
+ basic pod yaml file 
+by defaul the pod does not having the auto healing & sclaing feature
+---------------- pod.yml -------------
+  apiVersion: v1
+kind: Pod
+metadata:
+    name: nginx
+spec:
+    containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+         - containerPort: 80
+---------------------------------------------
 
+          KUBERNETES DEPLOYMENT
+DEPLOY: by useing this will create a replicaset
+*REPLICASET : IS nothing but a kubernetes controller which helps to auto healing feature of pod if a pod getting killed, If deployment says that will increases the pod
+
+Create a yaml file for deploy 
+ ------------------deploy.yml-------------
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: nginx-deployment
+    labels:
+      app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.14.2
+          ports:
+            - containerPort: 80
+--------------------------------------------------------------------
+
+
+   
