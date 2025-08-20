@@ -84,6 +84,44 @@ spec:
 
 lables in the deploy.yml & selectors in the serveces.yml file need to be same 
 
+deploy.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: nginx
+    labels:
+      app: sanjay_app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sanjay_app
+  template:
+    metadata:
+      labels:
+        app: sanjay_app
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+
+service.yml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  type: NodePort
+  selector:
+    app: sanjay_app
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30007
+
 
 
 
