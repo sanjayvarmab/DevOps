@@ -72,11 +72,6 @@ Isolated and include everything needed to run the app.
 6. Docker Registries
 Repositories to store and share Docker images.
 
-Examples: Docker Hub (public), AWS ECR, GitHub Container Registry (private).
 
-css
-Copy
-Edit
-[You] → [Docker CLI] → [Docker Daemon] → [Containers & Images]
-                         ↘
-                          [Docker Registry (Docker Hub)]
+
+
